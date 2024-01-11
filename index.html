@@ -1,4 +1,3 @@
-User
 <!DOCTYPE html>
 <!--
  The MIT License
@@ -92,6 +91,14 @@ User
                                 <span class="hidden-sm" aria-hidden="true">Layers</span>
                             </a>
                         </li>
+                       <!-- Informationen-Button -->
+                        <li class="left-sidebar-btn">
+                            <a href="#information" role="tab" data-toggle="tab" id="informationBtn">
+                                <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="padding-top:4px; padding-bottom:4px"></span>
+                                <span class="hidden-sm" aria-hidden="true">Informationen</span>
+                            </a>
+                        </li>
+
                         <!-- Markers button -->
                         <li class="left-sidebar-btn">
                             <a href="#markers" role="tab" data-toggle="tab">
@@ -136,6 +143,16 @@ User
                     <ul id="right-navbar" class="nav navbar-nav navbar-right">   
                         <!--Contents set by view/view-model bindings in main.js-->
                     </ul>
+                    <div id="informationSidebar" class="sidebar">
+                        <!-- Inhalte für die Informationen im gleichen Stil wie Layers -->
+                        <button type="button" class="btn btn-default">
+                            <img src="path/to/info1-icon.png" alt="Info 1">
+                        </button>
+                        <button type="button" class="btn btn-default">
+                            <img src="path/to/info2-icon.png" alt="Info 2">
+                        </button>
+                        <!-- Fügen Sie weitere Buttons für zusätzliche Informationen hinzu -->
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
