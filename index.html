@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
  The MIT License
@@ -91,13 +92,40 @@
                                 <span class="hidden-sm" aria-hidden="true">Layers</span>
                             </a>
                         </li>
-                       <!-- Informationen-Button -->
+                        <!-- Neuer Reiter und Sidebar -->
                         <li class="left-sidebar-btn">
-                            <a href="#information" role="tab" data-toggle="tab" id="informationBtn">
-                                <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="padding-top:4px; padding-bottom:4px"></span>
-                                <span class="hidden-sm" aria-hidden="true">Informationen</span>
+                            <a href="#newTab" role="tab" data-toggle="tab">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"
+                                    style="padding-top:4px; padding-bottom:4px"></span>
+                                <span class="hidden-sm" aria-hidden="true">New Tab</span>
                             </a>
                         </li>
+
+                        <!-- Sidebar für den neuen Reiter -->
+                        <div id="newTab" class="split split-horizontal tab-content">
+                            <!-- Sidebar Collapse Button -->
+                            <button type="button" id="collapse-newTab-sidebar" class="btn btn-primary btn-sm" style="float: right;">
+                                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                            </button>
+
+                            <!-- Button-Liste in der Sidebar -->
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#" onclick="openImage('image1.jpg')">Button 1</a></li>
+                                <li><a href="#" onclick="openImage('image2.jpg')">Button 2</a></li>
+                                <!-- Weitere Buttons nach Bedarf -->
+                            </ul>
+                        </div>
+
+                        <!-- JavaScript-Funktion zum Öffnen von Bildern -->
+                        <script>
+                            function openImage(imageSrc) {
+                                // Hier kannst du die Logik für das Öffnen der Bilder implementieren
+                                console.log('Bild öffnen: ' + imageSrc);
+                                // Zum Beispiel: Fenster öffnen, Bild laden, usw.
+                            }
+
+                            // ... (der restliche Code für die Sidebar-Toggle-Funktionalität bleibt unverändert)
+                        </script>
 
                         <!-- Markers button -->
                         <li class="left-sidebar-btn">
@@ -143,16 +171,6 @@
                     <ul id="right-navbar" class="nav navbar-nav navbar-right">   
                         <!--Contents set by view/view-model bindings in main.js-->
                     </ul>
-                    <div id="informationSidebar" class="sidebar">
-                        <!-- Inhalte für die Informationen im gleichen Stil wie Layers -->
-                        <button type="button" class="btn btn-default">
-                            <img src="path/to/info1-icon.png" alt="Info 1">
-                        </button>
-                        <button type="button" class="btn btn-default">
-                            <img src="path/to/info2-icon.png" alt="Info 2">
-                        </button>
-                        <!-- Fügen Sie weitere Buttons für zusätzliche Informationen hinzu -->
-                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -306,19 +324,6 @@
                 }
             });
         </script>
-        <!-- Inline-Skript für Fenster-Splitter -->
-        <script type="text/javascript">
-            // Hier fügen Sie den JavaScript-Code für den Informationen-Button hinzu
-            $('#informationBtn').on('click', function () {
-                $('#informationSidebar').toggle();
-            });
-        </script>
-        
-        <!-- 
-        Application Entry Point: RequireJS AMD configuration file 
-        main.js
-        -->
-        <script data-main="js/main" src="js/libs/require/require-2.3.5.min.js"></script>
 
         <!-- 
         Application Entry Point: RequireJS AMD configuration file 
