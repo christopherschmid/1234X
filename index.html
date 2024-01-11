@@ -96,10 +96,10 @@
                         <li class="left-sidebar-btn">
                             <a href="#newTab" role="tab" data-toggle="tab">
                                 <span class="glyphicon glyphicon-star" aria-hidden="true"
-                                    style="padding-top:4px; padding-bottom:4px"></span>
+                                      style="padding-top:4px; padding-bottom:4px"></span>
                                 <span class="hidden-sm" aria-hidden="true">New Tab</span>
                             </a>
-                        </li>                  
+                        </li>           
                         <!-- Settings button -->
                         <li class="left-sidebar-btn">
                             <a href="#settings" role="tab" data-toggle="tab">
@@ -161,21 +161,22 @@
             </div>
             <!-- Sidebar für den neuen Reiter -->
             <div id="newTab" class="split split-horizontal tab-content">
-                <!-- Sidebar Collapse Button -->
-                <button type="button" id="collapse-newTab-sidebar" class="btn btn-primary btn-sm" style="float: right;">
+                <!-- Sidebar Collapse Button oben -->
+                <button type="button" id="collapse-newTab-sidebar" class="btn btn-primary btn-sm" style="position: fixed; top: 0; left: 0; margin: 10px;">
                     <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                 </button>
-
+            
                 <!-- Button, um die Sidebar mit mehreren Buttons zu öffnen -->
-                <button id="openSidebarBtn" class="btn btn-primary">Open Sidebar</button>
-
+                <button id="openSidebarBtn" class="btn btn-primary" style="margin-top: 50px;">Open Sidebar</button>
+            
                 <!-- Liste von Buttons in der Sidebar -->
-                <ul class="nav nav-pills nav-stacked" id="sidebarButtons" style="display: none;">
+                <ul class="nav nav-pills nav-stacked" id="sidebarButtons" style="display: none; position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background-color: #fff; padding: 15px;">
                     <li><a href="#" onclick="openImage('image1.jpg')">Button 1</a></li>
                     <li><a href="#" onclick="openImage('image2.jpg')">Button 2</a></li>
                     <!-- Weitere Buttons nach Bedarf -->
                 </ul>
             </div>
+
                         <!-- =========================SPLITTER============================== -->
             <!--
             Explorer window
@@ -312,23 +313,25 @@
         main.js
         -->
         <script data-main="js/main" src="js/libs/require/require-2.3.5.min.js"></script>
-        <script>
-            function toggleSidebar() {
-                // Zeige oder verstecke die Sidebar basierend auf dem aktuellen Zustand
-                var sidebar = document.getElementById('sidebarButtons');
-                sidebar.style.display = (sidebar.style.display === 'none' || sidebar.style.display === '') ? 'block' : 'none';
-            }
-        
-            function openImage(imageSrc) {
-                // Hier kannst du die Logik für das Öffnen der Bilder implementieren
-                console.log('Bild öffnen: ' + imageSrc);
-                // Zum Beispiel: Fenster öffnen, Bild laden, usw.
-            }
-        
-            // Hinzufügen eines Event Listeners für den Button zum Öffnen und Schließen der Sidebar
-            document.getElementById('openSidebarBtn').addEventListener('click', toggleSidebar);
-            document.getElementById('collapse-newTab-sidebar').addEventListener('click', toggleSidebar);
-        </script>
+       <!-- JavaScript-Funktionen zum Öffnen und Schließen der Sidebar sowie zum Öffnen von Bildern -->
+       <script>
+           function toggleSidebar() {
+               // Zeige oder verstecke die Sidebar basierend auf dem aktuellen Zustand
+               var sidebar = document.getElementById('sidebarButtons');
+               var isOpen = sidebar.style.left === '0px';
+               sidebar.style.left = isOpen ? '-250px' : '0px';
+           }
+       
+           function openImage(imageSrc) {
+               // Hier kannst du die Logik für das Öffnen der Bilder implementieren
+               console.log('Bild öffnen: ' + imageSrc);
+               // Zum Beispiel: Fenster öffnen, Bild laden, usw.
+           }
+       
+           // Hinzufügen eines Event Listeners für den Button zum Öffnen und Schließen der Sidebar
+           document.getElementById('openSidebarBtn').addEventListener('click', toggleSidebar);
+           document.getElementById('collapse-newTab-sidebar').addEventListener('click', toggleSidebar);
+       </script>
 
     </body>
 </html>
