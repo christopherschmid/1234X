@@ -306,6 +306,19 @@
                 }
             });
         </script>
+        <!-- Inline-Skript für Fenster-Splitter -->
+        <script type="text/javascript">
+            // Hier fügen Sie den JavaScript-Code für den Informationen-Button hinzu
+            $('#informationBtn').on('click', function () {
+                $('#informationSidebar').toggle();
+            });
+        </script>
+        
+        <!-- 
+        Application Entry Point: RequireJS AMD configuration file 
+        main.js
+        -->
+        <script data-main="js/main" src="js/libs/require/require-2.3.5.min.js"></script>
 
         <!-- 
         Application Entry Point: RequireJS AMD configuration file 
