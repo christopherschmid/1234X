@@ -60,51 +60,6 @@
         Main Menu NavBar
         -->
         <nav class="navbar navbar-default navbar-fixed-top">
-         <!-- Hauptinhalt -->
-            <div id="main" class="container-split">
-                <!-- Left Sidebar -->
-                <div id="left-sidebar" class="split split-horizontal tab-content">
-                    <!-- Collapse left sidebar button -->
-                    <button type="button" id="collapse-left-sidebar" class="btn btn-primary btn-sm" style="float: right;">
-                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                    </button>
-                </div>
-        
-                <!-- SPLITTER -->
-                <!-- Explorer Fenster -->
-                <div id="explorer" class="split split-horizontal">
-                    <!-- Globe Canvas -->
-                    <div id="globe" class="split split-vertical" style="height: 100%;">
-                        <!-- Canvas für die 3D-Globe -->
-                        <canvas id="globe-canvas" tabindex='1' data-bind="style: { cursor: dropIsArmed() ? 'crosshair' : 'default' }">
-                            Try Chrome or FireFox.
-                        </canvas>
-                    </div>
-        
-                    <!-- SPLITTER -->
-                    <!-- Info Panel -->
-                    <div id="info-panel" class="split split-vertical">
-                        <!-- Button zum Kollabieren des Info-Panels -->
-                        <button type="button" id="collapse-info-panel" class="btn btn-primary btn-sm" style="float: right">
-                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                        </button>
-        
-                        <!-- Liste von Buttons im Info-Panel -->
-                        <ul id="info-panel-buttons" class="list-group">
-                            <li class="list-group-item">
-                                <button class="btn btn-info btn-block" onclick="openImage('image1.jpg')">Bild 1</button>
-                            </li>
-                            <li class="list-group-item">
-                                <button class="btn btn-info btn-block" onclick="openImage('image2.jpg')">Bild 2</button>
-                            </li>
-                            <li class="list-group-item">
-                                <button class="btn btn-info btn-block" onclick="openImage('image3.jpg')">Bild 3</button>
-                            </li>
-                            <!-- Weitere Buttons können nach Bedarf hinzugefügt werden -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="container-fluid">
                 <!-- Branding and 'hamburger' menu -->
                 <div id="header" class="navbar-header">
@@ -249,9 +204,6 @@
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
         <script src="js/libs/split/v1.3.5/split.min.js" type="text/javascript"></script>
         <script type="text/javascript">
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
-        <script src="js/libs/split/v1.3.5/split.min.js" type="text/javascript"></script>
-        <script type="text/javascript">
             // -----------------------------------------------------------
             // Add the window splitters
             // -----------------------------------------------------------
@@ -344,23 +296,13 @@
                     $(horzSplitPanes[0]).css('overflow-y', 'hidden');
                 }
             });
-                 // Funktion zum Öffnen eines Bildes
-        function openImage(imageSrc) {
-            // Hier kannst du die Logik zum Öffnen des Bildes einfügen
-            alert('Bild öffnen: ' + imageSrc);
-            // Beispiel: Öffnen des Bildes in einem Modal (Bootstrap)
-            $('#imageModal').modal('show');
-        }
         </script>
-
 
         <!-- 
         Application Entry Point: RequireJS AMD configuration file 
         main.js
         -->
         <script data-main="js/main" src="js/libs/require/require-2.3.5.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        </body>
+
+    </body>
 </html> 
