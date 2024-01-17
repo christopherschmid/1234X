@@ -85,17 +85,31 @@
         }
     </style>
     <style>
-        /* Füge diesen CSS-Code hinzu oder aktualisiere ihn in deinem bestehenden Stilbereich */
-        #scrollable-content {
-            max-width: 600px; /* Beispielwert - Passe die Breite nach Bedarf an */
-            margin: auto;
-            text-align: justify;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
+        #scrollable-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        h2, p {
+            text-align: center;
+        }
+
+        /* Add additional styling as needed */
+
     </style>
+
 </head>
 <body>
     <video id="video-background" autoplay muted loop>
