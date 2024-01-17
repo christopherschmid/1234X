@@ -22,6 +22,7 @@ define([
     'viewmodels/LayerSettings',
     'viewmodels/MarkerEditor',
     'viewmodels/MarkersViewModel',
+  "viewmodels/ExplanationsViewModel",
     'viewmodels/ProjectionsViewModel',
     'viewmodels/SearchViewModel',
     'viewmodels/SettingsViewModel',
@@ -35,6 +36,7 @@ define([
     'text!views/layers.html',
     'text!views/layer-settings.html',
     'text!views/markers.html',
+    'text!views/explanations.html',
     'text!views/marker-editor.html',
     'text!views/projections.html',
     'text!views/settings.html',
@@ -64,6 +66,7 @@ define([
         LayerSettings,
         MarkerEditor,
         MarkersViewModel,
+        ExplanationsViewModel,
         ProjectionsViewModel,
         SearchViewModel,
         SettingsViewModel,
@@ -77,6 +80,7 @@ define([
         layersHtml,
         layerSettingsHtml,
         markersHtml,
+        explanationsHtml,
         markerEditorHtml,
         projectionsHtml,
         settingsHtml,
@@ -173,6 +177,7 @@ define([
             // Tab Panels
             new LayersViewModel(this.globe, layersHtml, "left-sidebar");
             var markersViewModel = new MarkersViewModel(markersHtml, "left-sidebar");
+            var explanationsViewModel = new ExplanationsViewModel(explanationsHtml, "left-sidebar");
             new SettingsViewModel(this.globe, settingsHtml, "left-sidebar");
             new InfoViewModel(this.globe, infoHtml, "info-panel");
 
