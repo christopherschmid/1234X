@@ -118,21 +118,7 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- Search box and button (bound to SearchViewModel)-->
-                    <div id="main-navbar-search">
-                        <form id="search" class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Destination" id="searchText"
-                                       data-bind="value: searchText, valueUpdate: 'keyup', event: {keypress: onEnter}"/>
-                            </div>
-                            <button id="searchButton" class="btn btn-primary" type="submit"
-                                    data-bind="click: $root.performSearch">
-                                <span class="glyphicon glyphicon-search visible-sm-block" aria-hidden="true"
-                                      style="padding-top:4px; padding-bottom:4px"></span>
-                                <span class="hidden-sm" aria-hidden="true">Go To</span>
-                            </button>
-                        </form>
-                    </div>
+
                     <ul id="right-navbar" class="nav navbar-nav navbar-right">   
                         <!--Contents set by view/view-model bindings in main.js-->
                     </ul>
